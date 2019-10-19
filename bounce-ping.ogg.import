@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/bounce-ping.ogg-861751744eb89710d382347464a7f96b.oggstr"
+
+[deps]
+
+source_file="res://bounce-ping.ogg"
+dest_files=[ "res://.import/bounce-ping.ogg-861751744eb89710d382347464a7f96b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

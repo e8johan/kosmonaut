@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="CubeMesh" id=2]
+material = SubResource( 1 )
+size = Vector3( 1, 0.5, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=3]
+points = PoolVector3Array( -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, -0.5, -0.25, 0.5, 0.5, -0.25, -0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, 0.5, 0.25, -0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, -0.25, 0.5, 0.5, 0.25, 0.5, -0.5, -0.25, 0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, 0.5, 0.25, -0.5, -0.5, -0.25, -0.5, -0.5, 0.25, -0.5, 0.5, -0.25, -0.5 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 1, 0.5, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+points = PoolVector3Array( -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, -0.5, -0.25, 0.5, 0.5, -0.25, -0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, 0.5, 0.25, -0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, -0.25, 0.5, 0.5, 0.25, 0.5, -0.5, -0.25, 0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, 0.5, 0.25, -0.5, -0.5, -0.25, -0.5, -0.5, 0.25, -0.5, 0.5, -0.25, -0.5 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0, 0, 1, 1 )
+
+[sub_resource type="CubeMesh" id=7]
+material = SubResource( 6 )
+size = Vector3( 1, 0.5, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=8]
+points = PoolVector3Array( -0.5, 0.25, 0.5, 0.5, 0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, -0.5, -0.25, 0.5, 0.5, -0.25, -0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, -0.5, 0.5, 0.25, -0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, -0.25, 0.5, 0.5, 0.25, 0.5, -0.5, -0.25, 0.5, -0.5, 0.25, 0.5, 0.5, -0.25, 0.5, 0.5, 0.25, -0.5, -0.5, -0.25, -0.5, -0.5, 0.25, -0.5, 0.5, -0.25, -0.5 )
+
+[node name="Blocks" type="Spatial"]
+
+[node name="RedBlock" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.64616, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="RedBlock"]
+
+[node name="CollisionShape" type="CollisionShape" parent="RedBlock/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="WhiteBlock" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59249, 0, 0 )
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="WhiteBlock"]
+
+[node name="CollisionShape" type="CollisionShape" parent="WhiteBlock/StaticBody"]
+shape = SubResource( 5 )
+
+[node name="BlueBlock" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.841351, 0, 0 )
+mesh = SubResource( 7 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="BlueBlock"]
+
+[node name="CollisionShape" type="CollisionShape" parent="BlueBlock/StaticBody"]
+shape = SubResource( 8 )
