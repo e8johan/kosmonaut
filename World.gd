@@ -29,5 +29,6 @@ func _process(delta) -> void:
 	if player_pos.x > goal_pos.to_global(Vector3.ZERO).x and player.running:
 		print("GOAL")
 		player.stop()
-		yield(get_tree().create_timer(5), "timeout")	
+		$FinishLayer.play()
+		yield($FinishLayer, "finished")
 		get_tree().quit()
